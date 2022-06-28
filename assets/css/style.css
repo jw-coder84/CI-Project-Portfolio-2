@@ -10,7 +10,13 @@ div {
     font-size: 250%;
 }
 
-button {
+#buttons {
+    font-size: 250%;
+    border-radius: 15%;
+    padding: 1%;
+}
+
+#buttons > button{
     font-size: 100%;
     border-radius: 15%;
     padding: 1%;
@@ -18,4 +24,8 @@ button {
 
 i {
     padding: 1%;
+}
+
+#next {
+    margin-left: 50%;
 }
