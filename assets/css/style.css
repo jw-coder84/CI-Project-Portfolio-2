@@ -5,6 +5,11 @@ body {
     color: #ffffff;
 }
 
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 div {
     text-align: center;
     font-size: 250%;

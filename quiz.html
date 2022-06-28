@@ -11,17 +11,21 @@
     </head>
     <body>
         <div>
-            <h1><i class="fa-solid fa-clapperboard"></i> Movie Quiz <i class="fa-solid fa-film"></i></h1>
+            <a href="index.html"><h1><i class="fa-solid fa-clapperboard"></i> Movie Quiz <i class="fa-solid fa-film"></i></h1></a>
         </div>
         <div class="game-area">
-            <span id="question">Question 1</span>
-            <ul>
-                <li id="answer1">1</li>
-                <li id="answer2">2</li>
-                <li id="answer3">3</li>
-                <li id="answer4">4</li>
-            </ul>
-        </div>
+            <form>
+                <label id="question">Question 1</label><br><br>
+                
+                <input type="radio" id="answer1" name="fav_language" value="HTML">
+                <label for="answer1">Answer 1</label><br>
+                <input type="radio" id="answer2" name="fav_language" value="CSS">
+                <label for="answer2">Answer 2</label><br>
+                <input type="radio" id="answer3" name="fav_language" value="JavaScript">
+                <label for="answer3">Answer 3</label><br>
+                <input type="submit" value="Answer">
+            </form>
+        </div><br>
         <button id="next">Next question ></button>
 
 
