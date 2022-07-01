@@ -20,6 +20,13 @@ let qA = [{
     answerOne: 'The World is Not Enough and Quantum of Solace', 
     answerTwo: 'The Living Daylights and Liscence to Kill', 
     answerThree: 'Skyfall and Spectre',
+},
+{
+    question: 'Which film did Dan Aykroyd star in and NOT co-write?',
+    answerOne: 'The Blues Brothers',
+    rightAnswer: 'Evolution',
+    answerTwo: 'Ghostbusters',
+    answerThree: 'Ghostbusters 2'
 }];
 
 
@@ -33,3 +40,13 @@ function displayQuestion() {
 
 
 }
+
+document.getElementsByClassName('btn-nextq').addEventListener('click', function() {
+    for (let i = 0; i <= qA.length; i ++) {
+        document.getElementById('question').innerText = qA[i].question;
+        document.getElementById('a0').innerText = qA[i].answerOne;
+        document.getElementById('a1').innerText = qA[i].answerTwo;
+        document.getElementById('a2').innerText = qA[i].rightAnswer;
+        document.getElementById('a3').innerText = qA[i].answerThree;
+    }
+})
