@@ -35,8 +35,12 @@ i {
     margin-left: 50%;
 }
 
-form {
+.game-area {
     text-align: left;
     margin-left: 20%;
+}
+
+#question {
+    font-size: small;
 }
 
