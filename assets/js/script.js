@@ -1,9 +1,7 @@
 
-
 document.addEventListener("DOMContentLoaded", function () {
     displayQuestion();
-
-
+    
 })
 
 
@@ -109,24 +107,33 @@ let qA = [{
     correctAnswer: 'b'
 }];
 
+let i = 0;
+
+let btnNext = document.getElementById('btnNextq');
 
 function displayQuestion() {
 
-    document.getElementById('question').innerText = qA[0].question;
-    document.getElementById('a0').innerText = qA[0].answers.a;
-    document.getElementById('a1').innerText = qA[0].answers.b;
-    document.getElementById('a2').innerText = qA[0].answers.c;
-    document.getElementById('a3').innerText = qA[0].answers.d;
+
+    document.getElementById('question').innerText = qA[i].question;
+    document.getElementById('a0').innerText = qA[i].answers.a;
+    document.getElementById('a1').innerText = qA[i].answers.b;
+    document.getElementById('a2').innerText = qA[i].answers.c;
+    document.getElementById('a3').innerText = qA[i].answers.d;
+
+}
+
+function checkAnswer() {
+
+
 
 
 }
 
-document.getElementsByClassName('btn-nextq').addEventListener('click', function() {
-    for (let i = 0; i <= qA.length; i ++) {
-        document.getElementById('question').innerText = qA[i].question;
-        document.getElementById('a0').innerText = qA[i].answers.a;
-        document.getElementById('a1').innerText = qA[i].answers.b;
-        document.getElementById('a2').innerText = qA[i].answers.c;
-        document.getElementById('a3').innerText = qA[i].answers.d;
-    }
-})
+function nextQuestion() {
+
+    btnNext.addEventListener('click', function() {
+        i++;
+        displayQuestion();
+
+    })
+}
