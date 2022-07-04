@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-const qA = [{
+let qA = [{
     id: 0,
     question: 'Which film won all eleven oscars that it was nominated for?', 
     answers: [
@@ -113,7 +113,7 @@ let id = 0;
 
 function run(id) {
     
-    var flag = document.getElementsByClassName("flag");
+    var flag = document.getElementsByClassName('flag');
     flag[0].innerText = "";
     
     const questions = document.getElementById('question');
@@ -134,10 +134,10 @@ function run(id) {
 
 
 
-    a0.value = qA[id].answers[0].isCorrect;
-    a1.value = qA[id].answers[1].isCorrect;
-    a2.value = qA[id].answers[2].isCorrect;
-    a3.value = qA[id].answers[3].isCorrect;
+    a0.value = qA[id].answers[0].correct;
+    a1.value = qA[id].answers[1].correct;
+    a2.value = qA[id].answers[2].correct;
+    a3.value = qA[id].answers[3].correct;
 
 
     var selected = '';
