@@ -1,10 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    //run(0);
-
+   // console.log(document.getElementById('question') + 'first');
+    
 })
 
-let qA = [{
+
+
+const qA = [{
     id: 0,
     question: 'Which film won all eleven oscars that it was nominated for?', 
     answers: [
@@ -107,16 +109,16 @@ let qA = [{
 }];
 
 var start = true;
+let id = 0;
 
 function run(id) {
-
+    
     var flag = document.getElementsByClassName("flag");
     flag[0].innerText = "";
-
-    let questions = document.getElementById('question');
-
+    
+    const questions = document.getElementById('question');
+    console.log(qA[id].question);
     questions.textContent = qA[id].question;
-
 
     const a0 = document.getElementById('a0');
     const a1 = document.getElementById('a1');
@@ -140,7 +142,7 @@ function run(id) {
 
     var selected = '';
 
-    a0.addEventListener("click", () => {
+    a0.addEventListener("click", function() {
         a0.style.backgroundColor = "lightgoldenrodyellow";
         a1.style.backgroundColor = "lightskyblue";
         a2.style.backgroundColor = "lightskyblue";
@@ -148,7 +150,7 @@ function run(id) {
         selected = a0.value;
     })
 
-    a1.addEventListener("click", () => {
+    a1.addEventListener("click", function() {
         a0.style.backgroundColor = "lightskyblue";
         a1.style.backgroundColor = "lightgoldenrodyellow";
         a2.style.backgroundColor = "lightskyblue";
@@ -156,7 +158,7 @@ function run(id) {
         selected = a1.value;
     })
 
-    a2.addEventListener("click", () => {
+    a2.addEventListener("click", function() {
         a0.style.backgroundColor = "lightskyblue";
         a1.style.backgroundColor = "lightskyblue";
         a2.style.backgroundColor = "lightgoldenrodyellow";
@@ -164,7 +166,7 @@ function run(id) {
         selected = a2.value;
     })
 
-    a3.addEventListener("click", () => {
+    a3.addEventListener("click", function() {
         a0.style.backgroundColor = "lightskyblue";
         a1.style.backgroundColor = "lightskyblue";
         a2.style.backgroundColor = "lightskyblue";
@@ -175,7 +177,7 @@ function run(id) {
 
     const answer = document.getElementsByClassName('btn-answer');
 
-    answer[0].addEventListener("click", () => {
+    answer[0].addEventListener("click", function() {
 
         if (selected == true) {
             flag[0].innerHTML = "True";
@@ -191,13 +193,13 @@ function run(id) {
 
 
 if (start) {
-    run(parseInt(0));
+    run("0");
 }
 
 const next = document.getElementsByClassName('next')[0];
-var id = 0;
+
   
-next.addEventListener("click", () => {
+next.addEventListener("click", function() {
     start = false;
     if (id < 9) {
         id++;
