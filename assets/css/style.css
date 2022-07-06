@@ -31,8 +31,16 @@ i {
     padding: 1%;
 }
 
-#next {
-    margin-left: 50%;
+.next {
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.btn-answer {
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 15px;
 }
 
 .game-area {
@@ -44,3 +52,7 @@ i {
     margin-bottom: 2%;
 }
 
+.flag {
+    text-align: left;
+    margin: 1%;
+}

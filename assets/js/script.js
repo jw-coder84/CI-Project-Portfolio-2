@@ -1,11 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log();
-     
- })
+
  
- 
- 
- let qA = [{
+let qA = [{
      id: 0,
      question: 'Which film won all eleven oscars that it was nominated for?', 
      answers: [
@@ -109,7 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
  
  var start = true;
  let id = 0;
- 
+ let score = 0;
+ let showScore = document.getElementById('score');
+
  function run(id) {
      
      var flag = document.getElementsByClassName('flag');
@@ -124,21 +121,16 @@ document.addEventListener("DOMContentLoaded", function () {
      const a2 = document.getElementById('a2');
      const a3 = document.getElementById('a3');
  
- 
- 
      a0.innerText = qA[id].answers[0].a;
      a1.innerText = qA[id].answers[1].b;
      a2.innerText = qA[id].answers[2].c;
      a3.innerText = qA[id].answers[3].d;
- 
- 
  
      a0.value = qA[id].answers[0].correct;
      a1.value = qA[id].answers[1].correct;
      a2.value = qA[id].answers[2].correct;
      a3.value = qA[id].answers[3].correct;
  
-
      a0.style.backgroundColor = "black";
      a1.style.backgroundColor = "black";
      a2.style.backgroundColor = "black";
@@ -181,25 +173,27 @@ document.addEventListener("DOMContentLoaded", function () {
          a3.style.backgroundColor = "#e68a00";
          selected = a3.value;
      })
- 
+     
      const answer = document.getElementsByClassName('btn-answer');
-     let score = 0;
      answer[0].addEventListener("click", function() {
     
          if (selected == "true") {
-             flag[0].innerHTML = "True";
-             flag[0].style.color = "green";
-             score ++;
+             flag[0].innerHTML = "Correct!";
+             flag[0].style.color = "#99ff33";
          } else {
-             flag[0].innerHTML = "False";
+             flag[0].innerHTML = "Wrong";
              flag[0].style.color = "red";
          }
  
      })
  
  }
+
  
  
+ showScore.textContent = `Score:  ${score}`;
+ 
+
  if (start) {
      run("0");
  }
@@ -222,6 +216,9 @@ next.addEventListener("click", function() {
         run(id);
         console.log(id);
     } 
+    if (id > 8) {
+        next.innerHTML = `Finish <i class="fa-solid fa-stop"></i>`;
+    }
    
  })
   
