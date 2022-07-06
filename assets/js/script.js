@@ -138,11 +138,20 @@ document.addEventListener("DOMContentLoaded", function () {
      a2.value = qA[id].answers[2].correct;
      a3.value = qA[id].answers[3].correct;
  
+
+     a0.style.backgroundColor = "black";
+     a1.style.backgroundColor = "black";
+     a2.style.backgroundColor = "black";
+     a3.style.backgroundColor = "black";
+     a0.style.color = "white";
+     a1.style.color = "white";
+     a2.style.color = "white";
+     a3.style.color = "white";
  
      var selected;
  
      a0.addEventListener("click", function() {
-         a0.style.backgroundColor = "lightgoldenrodyellow";
+         a0.style.backgroundColor = "#e68a00";
          a1.style.backgroundColor = "lightskyblue";
          a2.style.backgroundColor = "lightskyblue";
          a3.style.backgroundColor = "lightskyblue";
@@ -151,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
  
      a1.addEventListener("click", function() {
          a0.style.backgroundColor = "lightskyblue";
-         a1.style.backgroundColor = "lightgoldenrodyellow";
+         a1.style.backgroundColor = "#e68a00";
          a2.style.backgroundColor = "lightskyblue";
          a3.style.backgroundColor = "lightskyblue";
          selected = a1.value;
@@ -160,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
      a2.addEventListener("click", function() {
          a0.style.backgroundColor = "lightskyblue";
          a1.style.backgroundColor = "lightskyblue";
-         a2.style.backgroundColor = "lightgoldenrodyellow";
+         a2.style.backgroundColor = "#e68a00";
          a3.style.backgroundColor = "lightskyblue";
          selected = a2.value;
      })
@@ -169,17 +178,18 @@ document.addEventListener("DOMContentLoaded", function () {
          a0.style.backgroundColor = "lightskyblue";
          a1.style.backgroundColor = "lightskyblue";
          a2.style.backgroundColor = "lightskyblue";
-         a3.style.backgroundColor = "lightgoldenrodyellow";
+         a3.style.backgroundColor = "#e68a00";
          selected = a3.value;
      })
  
      const answer = document.getElementsByClassName('btn-answer');
- 
+     let score = 0;
      answer[0].addEventListener("click", function() {
     
          if (selected == "true") {
              flag[0].innerHTML = "True";
              flag[0].style.color = "green";
+             score ++;
          } else {
              flag[0].innerHTML = "False";
              flag[0].style.color = "red";
@@ -194,16 +204,24 @@ document.addEventListener("DOMContentLoaded", function () {
      run("0");
  }
  
- const next = document.getElementsByClassName('next')[0];
- 
-   
- next.addEventListener("click", function() {
-     start = false;
-     if (id < 9) {
-         id++;
-         run(id);
-         console.log(id);
-     }
+
+const next = document.getElementsByClassName('next')[0];   
+next.addEventListener("click", function() {
+    start = false;
+    a0.style.backgroundColor = "black";
+    a1.style.backgroundColor = "black";
+    a2.style.backgroundColor = "black";
+    a3.style.backgroundColor = "black";
+    a0.style.color = "white";
+    a1.style.color = "white";
+    a2.style.color = "white";
+    a3.style.color = "white";
+
+    if (id < 9) {
+        id++;
+        run(id);
+        console.log(id);
+    } 
    
  })
   
