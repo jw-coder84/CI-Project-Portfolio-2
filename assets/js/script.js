@@ -144,32 +144,32 @@ let qA = [{
  
      a0.addEventListener("click", function() {
          a0.style.backgroundColor = "#e68a00";
-         a1.style.backgroundColor = "lightskyblue";
-         a2.style.backgroundColor = "lightskyblue";
-         a3.style.backgroundColor = "lightskyblue";
+         a1.style.backgroundColor = "black";
+         a2.style.backgroundColor = "black";
+         a3.style.backgroundColor = "black";
          selected = a0.value;
      })
  
      a1.addEventListener("click", function() {
-         a0.style.backgroundColor = "lightskyblue";
+         a0.style.backgroundColor = "black";
          a1.style.backgroundColor = "#e68a00";
-         a2.style.backgroundColor = "lightskyblue";
-         a3.style.backgroundColor = "lightskyblue";
+         a2.style.backgroundColor = "black";
+         a3.style.backgroundColor = "black";
          selected = a1.value;
      })
  
      a2.addEventListener("click", function() {
-         a0.style.backgroundColor = "lightskyblue";
-         a1.style.backgroundColor = "lightskyblue";
+         a0.style.backgroundColor = "black";
+         a1.style.backgroundColor = "black";
          a2.style.backgroundColor = "#e68a00";
-         a3.style.backgroundColor = "lightskyblue";
+         a3.style.backgroundColor = "black";
          selected = a2.value;
      })
  
      a3.addEventListener("click", function() {
-         a0.style.backgroundColor = "lightskyblue";
-         a1.style.backgroundColor = "lightskyblue";
-         a2.style.backgroundColor = "lightskyblue";
+         a0.style.backgroundColor = "black";
+         a1.style.backgroundColor = "black";
+         a2.style.backgroundColor = "black";
          a3.style.backgroundColor = "#e68a00";
          selected = a3.value;
      })
