@@ -104,12 +104,15 @@ let qA = [{
  
 let start = true;
 let id = 0;
-let score = 0;
-let showScore = document.getElementById('score');
+
+
 const next = document.getElementsByClassName('next')[0];
 
 function run(id) {
-     
+
+    let score = 0;
+    let showScore = document.getElementById('score');
+
     let flag = document.getElementsByClassName('flag');
     flag[0].innerText = "";
      
@@ -186,33 +189,28 @@ function run(id) {
         a1.disabled = true;
         a2.disabled = true;
     })
-     
+    
     const answer = document.getElementsByClassName('btn-answer');
     answer[0].addEventListener("click", function() {
         next.disabled = false;
         if (selected == "true") {
             flag[0].innerHTML = "Correct!";
             flag[0].style.color = "#99ff33";
-            score ++;
         } else {
             flag[0].innerHTML = "Wrong";
             flag[0].style.color = "red";
         }
- 
+        
     })
- 
+    showScore.textContent = `Score:  ${score}`;
+
 }
 
- 
- 
-showScore.textContent = `Score:  ${score}`;
- 
 
 if (start) {
     run("0");
 }
- 
-  
+
 next.addEventListener("click", function() {
     start = false;
     a0.style.backgroundColor = "black";
@@ -236,5 +234,12 @@ next.addEventListener("click", function() {
     if (id > 8) {
         next.innerHTML = `Finish <i class="fa-solid fa-stop"></i>`;
     }
-   
+    if (id == 9) {
+        next.outerHTML = `<button onclick="window.location.href='index.html';">Finish <i class="fa-solid fa-stop"></i></button>`;
+    }
  })
+
+
+    
+ 
+ 
