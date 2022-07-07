@@ -238,8 +238,3 @@ next.addEventListener("click", function() {
     }
    
  })
-
-
- function  inactive () {
-    
- }
