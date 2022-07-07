@@ -1,4 +1,8 @@
+let id = 0;
 
+document.addEventListener('DOMContentLoaded', function () {
+    run(id);
+})
 
 let qA = [{
     id: 0,
@@ -102,16 +106,11 @@ let qA = [{
     ]
 }];
  
-let start = true;
-let id = 0;
-
 
 const next = document.getElementsByClassName('next')[0];
 
 function run(id) {
 
-    let score = 0;
-    let showScore = document.getElementById('score');
 
     let flag = document.getElementsByClassName('flag');
     flag[0].innerText = "";
@@ -196,23 +195,27 @@ function run(id) {
         if (selected == "true") {
             flag[0].innerHTML = "Correct!";
             flag[0].style.color = "#99ff33";
+            add_score();
         } else {
             flag[0].innerHTML = "Wrong";
             flag[0].style.color = "red";
         }
         
     })
-    showScore.textContent = `Score:  ${score}`;
 
 }
 
 
-if (start) {
-    run("0");
+function add_score() {
+    
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
+    
 }
+
+
 
 next.addEventListener("click", function() {
-    start = false;
     a0.style.backgroundColor = "black";
     a1.style.backgroundColor = "black";
     a2.style.backgroundColor = "black";
@@ -238,7 +241,6 @@ next.addEventListener("click", function() {
         next.outerHTML = `<button onclick="window.location.href='index.html';">Finish <i class="fa-solid fa-stop"></i></button>`;
     }
  })
-
 
     
  
