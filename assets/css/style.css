@@ -61,17 +61,16 @@ i {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 800px;
+    width: 900px;
 }
 
 #question {
-    margin: 1%;
     background-color: black;
 }
 
 .flag {
-    text-align: left;
-    margin-top: 15%;
+    text-align: center;
+    margin-top: 10%;
 }
 
 h1 {
