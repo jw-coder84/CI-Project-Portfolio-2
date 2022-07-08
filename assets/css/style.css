@@ -101,6 +101,10 @@ h1 {
         font-size: 60%;
     }
 
+    #intro-text {
+        margin: 10%;
+    }
+
     #question {
         margin-top: 10%;
         margin-bottom: 15%;
@@ -130,6 +134,10 @@ h1 {
 
     .flag {
         margin-top: 5%;
+    }
+
+    h1 {
+        font-size: 80%;
     }
 
 }
