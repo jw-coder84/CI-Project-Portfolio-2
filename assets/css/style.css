@@ -83,7 +83,7 @@ h1 {
 @media screen and (max-width: 500px) {
     #buttons {
         border: 5px;
-        border-color: #ffffff;
+        border-color: #ddb60a;
         border-style: groove;
         max-width: 200px;
         margin: auto;
@@ -122,10 +122,14 @@ h1 {
         margin-left: 5%;
         margin-bottom: 5%;
         width: auto;
-        background-size: 310px 400px;
+        background-size: 310px 300px;
     } 
     #question {
         margin: 5%;
+    }
+
+    .flag {
+        margin-top: 5%;
     }
 
 }
