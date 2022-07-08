@@ -16,6 +16,9 @@ div {
 }
 
 #buttons {
+    border: 5px;
+    border-color: #ffffff;
+    border-style: groove;
     font-size: 250%;
     border-radius: 15%;
     padding: 1%;
@@ -55,4 +58,43 @@ i {
 .flag {
     text-align: left;
     margin: 1%;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    #buttons {
+        border: 5px;
+        border-color: #ffffff;
+        border-style: groove;
+        max-width: 200px;
+        margin: auto;
+
+    }
+    #buttons > i {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 90%;
+    }
+
+    p {
+        font-size: 60%;
+    }
+
+    #question {
+        margin-top: 10%;
+        font-size: 60%;
+    }
+
+    .scores {
+        margin-left: 0%;
+    }
+    
+    .game-area {
+        margin-left: 5%;
+    }
 }
