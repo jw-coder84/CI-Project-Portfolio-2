@@ -9,9 +9,11 @@
         <title>Movie Quiz</title>
     </head>
     <body>
+        <!--Site logo.-->
         <div>
             <a href="index.html"><h1><i class="fa-solid fa-clapperboard"></i>Movie Quiz<i class="fa-solid fa-film"></i></h1></a>
         </div>
+        <!--Question, answers, score and correct/wrong text display.-->
         <div class="game-area">
             <p class="scores">Score: <span id="score">0</span></p>
             <h6 id="question">Question 1</h6>     
@@ -19,11 +21,13 @@
             <button id="a1">Answer 2</button><br>          
             <button id="a2">Answer 3</button><br>        
             <button id="a3">Answer 4</button><br>
-            
+            <!--Buttons to choose the selected answer and move to the next question.-->
             <button class="btn-answer">Answer <i class="fa-solid fa-play"></i></button>
             <button class="next">Next question <i class="fa-solid fa-forward"></i></button>
+            <!--Flag displays 'Correct!' or 'Wrong' depending on the chosen answer.-->
             <h3 class="flag"></h3>
         </div><br>
+        <!--Font Awesome icons and javascript file.-->
         <script src="https://kit.fontawesome.com/e2defdb6b6.js" crossorigin="anonymous"></script>
         <script src="assets/js/script.js"></script>
     </body>
