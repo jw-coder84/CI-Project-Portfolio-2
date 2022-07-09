@@ -4,7 +4,7 @@ let id = 0;
 //Execute the run function once the DOM content has been loaded.
 document.addEventListener('DOMContentLoaded', function () {
     run(id);
-})
+});
 
 // Question and answer variable. Array of objects with nested array and objects for the answers.
 let qA = [{
@@ -161,7 +161,7 @@ function run(id) {
         a1.disabled = true;
         a2.disabled = true;
         a3.disabled = true;
-    })
+    });
  
     a1.addEventListener("click", function() {
         a0.style.backgroundColor = "black";
@@ -172,7 +172,7 @@ function run(id) {
         a0.disabled = true;
         a2.disabled = true;
         a3.disabled = true;
-    })
+    });
  
     a2.addEventListener("click", function() {
         a0.style.backgroundColor = "black";
@@ -183,7 +183,7 @@ function run(id) {
         a0.disabled = true;
         a1.disabled = true;
         a3.disabled = true;
-    })
+    });
  
     a3.addEventListener("click", function() {
         a0.style.backgroundColor = "black";
@@ -194,7 +194,7 @@ function run(id) {
         a0.disabled = true;
         a1.disabled = true;
         a2.disabled = true;
-    })
+    });
     //Display the flag message and increment score depending on if the answer is right or wrong.
     //Enable next button once an answer has been selected.
     const answer = document.getElementsByClassName('btn-answer');
@@ -209,7 +209,7 @@ function run(id) {
             flag[0].style.color = "red";
         }
         
-    })
+    });
 
 }
 
@@ -230,14 +230,11 @@ const next = document.getElementsByClassName('next')[0];
  * question is displayed. The answer button colours are also reset.
  */
 next.addEventListener("click", function() {
-    a0.style.backgroundColor = "black";
-    a1.style.backgroundColor = "black";
-    a2.style.backgroundColor = "black";
-    a3.style.backgroundColor = "black";
-    a0.style.color = "white";
-    a1.style.color = "white";
-    a2.style.color = "white";
-    a3.style.color = "white";
+    let a0 = document.getElementById('a0');
+    let a1 = document.getElementById('a1');
+    let a2 = document.getElementById('a2');
+    let a3 = document.getElementById('a3');
+
     a0.disabled = false;
     a1.disabled = false;
     a2.disabled = false;
@@ -256,8 +253,4 @@ next.addEventListener("click", function() {
     if (id == 9) {
         next.outerHTML = `<button onclick="window.location.href='index.html';">Finish <i class="fa-solid fa-stop"></i></button>`;
     }
- })
-
-    
- 
- 
+ });
