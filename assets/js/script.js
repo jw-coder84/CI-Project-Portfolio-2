@@ -1,9 +1,12 @@
+//varirable to pass to the run function.
 let id = 0;
 
+//Execute the run function once the DOM content has been loaded.
 document.addEventListener('DOMContentLoaded', function () {
     run(id);
 })
 
+// Question and answer variable. Array of objects with nested array and objects for the answers.
 let qA = [{
     id: 0,
     question: 'Which film won all eleven oscars that it was nominated for?', 
@@ -107,8 +110,11 @@ let qA = [{
 }];
  
 
-const next = document.getElementsByClassName('next')[0];
-
+/**
+ * The main function that displays the questions and answers.
+ * Each answer is processed and the score is incremented if the answer
+ * is correct.
+ */
 function run(id) {
 
 
@@ -116,24 +122,25 @@ function run(id) {
     flag[0].innerText = "";
      
     const questions = document.getElementById('question');
-     
+    //Display questions from the Q and A variable.
     questions.textContent = qA[id].question;
     next.disabled = true;
     const a0 = document.getElementById('a0');
     const a1 = document.getElementById('a1');
     const a2 = document.getElementById('a2');
     const a3 = document.getElementById('a3');
- 
+
+    //Display the answers from the Q and A variable.
     a0.innerText = qA[id].answers[0].a;
     a1.innerText = qA[id].answers[1].b;
     a2.innerText = qA[id].answers[2].c;
     a3.innerText = qA[id].answers[3].d;
- 
+    //Variables for correct answers.
     a0.value = qA[id].answers[0].correct;
     a1.value = qA[id].answers[1].correct;
     a2.value = qA[id].answers[2].correct;
     a3.value = qA[id].answers[3].correct;
- 
+    //Set the default colours of the answer buttons.
     a0.style.backgroundColor = "black";
     a1.style.backgroundColor = "black";
     a2.style.backgroundColor = "black";
@@ -144,7 +151,7 @@ function run(id) {
     a3.style.color = "white";
  
     let selected;
- 
+    //When answer is clicked, change colour and disable other answers.
     a0.addEventListener("click", function() {
         a0.style.backgroundColor = "#e68a00";
         a1.style.backgroundColor = "black";
@@ -188,7 +195,8 @@ function run(id) {
         a1.disabled = true;
         a2.disabled = true;
     })
-    
+    //Display the flag message and increment score depending on if the answer is right or wrong.
+    //Enable next button once an answer has been selected.
     const answer = document.getElementsByClassName('btn-answer');
     answer[0].addEventListener("click", function() {
         next.disabled = false;
@@ -205,7 +213,10 @@ function run(id) {
 
 }
 
-
+/**
+ * This function incremenets the score and is called if a correct answer is 
+ * selected.
+ */
 function add_score() {
     
     let oldScore = parseInt(document.getElementById('score').innerText);
@@ -213,8 +224,11 @@ function add_score() {
     
 }
 
-
-
+const next = document.getElementsByClassName('next')[0];
+/**
+ * The event listener re-enables the answers for selection once the next 
+ * question is displayed. The answer button colours are also reset.
+ */
 next.addEventListener("click", function() {
     a0.style.backgroundColor = "black";
     a1.style.backgroundColor = "black";
@@ -228,15 +242,17 @@ next.addEventListener("click", function() {
     a1.disabled = false;
     a2.disabled = false;
     a3.disabled = false;
-
+    //Increments the id to cycle through the questions until the max id is reached.
     if (id < 9) {
         id++;
         run(id);
         console.log(id);
     } 
+    //On the last question the 'next' button will show 'Finish' instead.
     if (id > 8) {
         next.innerHTML = `Finish <i class="fa-solid fa-stop"></i>`;
     }
+    //On the last question the finish button will link back to the landing page.
     if (id == 9) {
         next.outerHTML = `<button onclick="window.location.href='index.html';">Finish <i class="fa-solid fa-stop"></i></button>`;
     }
