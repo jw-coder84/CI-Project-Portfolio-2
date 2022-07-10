@@ -45,3 +45,39 @@ To run a quiz that enables the user to answer each question and move to the next
 
 ## Site Structure
 The site has a landing page with a 'play' button to initiate the quiz. The quiz content (questions, answers, buttons) appears in the center of the additional page.
+
+## Design Choices
+
+### Fonts
+The Google font Special Elite was used for the site with cursive being used as an alternate if the primary font can't be used.
+
+### Colour Scheme
+I chose a high contrast background and text colours. 
+
+* Background colour: #363E45
+* Text colour: #ffffff
+
+[Back to contents](#contents)
+
+# Features
+
+* The hompage shows the logo, introduction text and 'play' button to begin the quiz.
+<br>
+<details><summary><b>Home page - logo and play button</b></summary>
+
+![Logo and play button image](readme-files/homepage.png)
+</details><br>
+
+* The quiz page shows the question, possible answers and two buttons. The 'next question' button is initially inactive.
+* The 'answer' button is used to enter the selected answer. Once this has been done, the 'next question' button becomes active and can be used to proceed to the next question.
+* Once an answer is selected, the other answers become inactive.
+* The flag div will show 'Correct!' or 'Wrong' depending on the choesn answer.
+* The score is incremented for every correct answer.
+* On the last question the 'next question' button changes to 'Finish' and returns the user to the home page.
+<br>
+<details><summary><b>Quiz page - questions, answers, buttons, score and correct/wrong indicator</b></summary>
+
+![Quiz page image](readme-files/quiz-page.png)
+</details><br>
+
+## Future Implementation
