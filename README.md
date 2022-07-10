@@ -34,3 +34,14 @@ To run a quiz that enables the user to answer each question and move to the next
 # User Experience (UX)
 
 ## Design Prototype
+* The wireframe images below were created using Balsamiq Wireframes. The site layout was simple and contained so no changes were required for a table size screen. The layout only needed to change for mobile size screens.
+* I ended up using one background image for the question and answer area.
+* The end page was not implemented as I didn't have time but could be for a future feature.
+
+<img src="readme-files/wireframe-1.png" width="400" height="300"><br>
+<img src="readme-files/wireframe-2.png" width="400" height="300"><br>
+<img src="readme-files/wireframe-3.png" width="400" height="300"><br>
+<img src="readme-files/wireframe-4.png" width="200" height="400"><br>
+
+## Site Structure
+The site has a landing page with a 'play' button to initiate the quiz. The quiz content (questions, answers, buttons) appears in the center of the additional page.
