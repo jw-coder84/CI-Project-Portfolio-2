@@ -60,7 +60,7 @@ let qA = [{
 },
 {
     id: 5,
-    question: 'Which Mission Impossible film did J.J Abrams co-write and direct',
+    question: 'Which Mission Impossible film did J.J Abrams co-write and direct?',
     answers: [
         { a: 'MI: I', correct: false },
         { b: 'MI: II', correct: false },
@@ -70,7 +70,7 @@ let qA = [{
 },
 {
     id: 6,
-    question: 'What was the release year of the first Jurassic Park film',
+    question: 'What was the release year of the first Jurassic Park film?',
     answers: [
         { a: '1991', correct: false },
         { b: '1992', correct: false },
@@ -251,6 +251,6 @@ next.addEventListener("click", function() {
     }
     //On the last question the finish button will link back to the landing page.
     if (id == 9) {
-        next.outerHTML = `<button onclick="window.location.href='index.html';">Finish <i class="fa-solid fa-stop"></i></button>`;
+        next.outerHTML = `<button class="next" onclick="window.location.href='index.html';">Finish <i class="fa-solid fa-stop"></i></button>`;
     }
  });
