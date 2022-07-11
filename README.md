@@ -159,7 +159,7 @@ To run from your local machine:
 * Quiz answers 
 * [IMDB](https://www.imdb.com/)
 
-* The JavaScript ONLY was used and adapted from the following site:
+* The JavaScript ONLY was adapted from the following site:
 * [Simple JavaScript quiz](https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/)
 
 * The score increment code was taken from the Love Maths Code Institute walkthrough project.
